@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>American Home Security Systems | Special Offers</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+
+	<section class="billboard">
+		<div class="wrapper">
+			<div class="caption">
+				<p style="text-align:center">Get special deals before it's too late!</p>
+			</div>
+		</div>
+	</section><!--  End Billboard  -->
+
+
+	<section class="testimonials wrapper">
+
+		<span class="sep_line sep_top">
+		</span>
+
+		<h2>Testimonials</h2>
+		<div class="testi_slider" id="tslider">
+			<div class="t">
+				<p class="author">New Account Offer</p>
+				<p>Open a home account with us now and get the home security system free! (upon signing a three-year agreement, installation charges apply)</p>
+			</div>
+			<div class="t">
+				<p class="author">Local Offer</p>
+				<p>Open a new account in the Columbus, OH area and get a free $100 Visa gift card on top of the free home security system! (upon signing a three-year agreement, installation charges apply)</p>
+			</div>
+		</div>
+		<div id="t_navigation"></div>
+		<span class="sep_line sep_bottom"></span>
+
+	</section><!--  End Testimonials  -->
+
+	<section class="cta">
+		<h3>Sign up for an account now!</h3>
+		<%= link_to "Sign up", new_customer_registration_path, :class => "cta_btn" %><br>
+		<%= link_to "Sign in", "customer_login", :class => "cta_btn" %>
+		<span class="cta_sep"></span>
+	</section><!--  End cta  -->
+
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>American Home Security Systems | Home Security</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+
+	<section class="billboard">
+		<div class="wrapper">
+			<div class="caption">
+				<p style="text-align:center">Is your home really safe?</p>
+				<p>It can be with American Home Security Systems.</p>
+			</div>
+		</div>
+	</section><!--  End Billboard  -->
+
+	<section class="features">
+
+		<div class="wrapper" style="background-color:#353434">
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'home_icon1.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Guaranteed Service</h3>	
+						<p>We'll guarantee a 99.5% service uptime.</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'home_icon2.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Fast Response Time</h3>
+						<p>Our average response time from alarm triggering to authorities arriving on the scene is five minutes.</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'home_icon3.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Burglary and Fire Protection</h3>
+						<p>Why stop at protecting your home from burglars?  We also have fire alarms that trigger at a certain threshold of carbon monoxide.</p>	
+					</div>
+				</div>
+			</div>
+
+	</section><!--  End Features  -->
+
+	<%if current_customer %>
+	<% else %>
+	<section class="cta">
+		<h3>Protect your home now!</h3>
+		<%= link_to "Sign up for a free quote!", new_customer_registration_path, :class => "cta_btn" %>
+		<span class="cta_sep"></span>
+	</section><!--  End cta  -->
+	<% end %>
+
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>

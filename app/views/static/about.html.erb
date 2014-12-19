@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>American Home Security Systems | About Us</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+
+	<section class="billboard">
+		<div class="wrapper">
+			<div class="caption">
+				<p style="text-align:center">American Home Security Systems is a quickly-growing security firm based in Columbus, Ohio.
+			</div>
+		</div>
+	</section><!--  End Billboard  -->
+
+	<section class="testimonials wrapper">
+
+		<span class="sep_line sep_top">
+		</span>
+
+		<h2>About Us</h2>
+		<div class="testi_slider" id="tslider">
+			<div class="t">
+				<p>We provide state-of-the-art, reliable solutions to keep your home or business safe from harm.</p>
+			</div>
+			<div class="t">
+				<p>With American Home Security Systems, there's nothing to fear, and nothing to worry about.  You're safe with us.</p>
+			</div>
+			<div class="t">
+				<p>With our 99.5% guaranteed network uptime, immediate alert systems, and blazing fast response time, you can be sure that you'll be quickly taken care of in all situations.</p>
+			</div>
+		</div>
+		<div id="t_navigation"></div>
+		<span class="sep_line sep_bottom"></span>
+
+	</section><!--  End Testimonials  -->
+
+	<%if current_customer %>
+	<% else %>
+	<section class="cta">
+		<h3>Protect your home now!</h3>
+		<%= link_to "Sign up for a free quote!", new_customer_registration_path, :class => "cta_btn" %>
+		<span class="cta_sep"></span>
+	</section><!--  End cta  -->
+	<% end %>
+
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>

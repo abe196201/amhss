@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>American Home Security Systems</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+
+	<section class="billboard">
+		<div class="wrapper">
+			<div class="caption">
+				<p>For just a couple of dollars a day, keep your home and family safe.</p>
+			</div>
+		</div>
+	</section><!--  End Billboard  -->
+
+	<section class="features">
+
+		<div class="wrapper" style="background-color:#353434">
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'index_icon1.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Home Security</h3>
+						<p>Protect your home from intruders, fires, floods, and storms.</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'index_icon2.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Business Security</h3>
+						<p>Keep your small or medium-sized business free from harm.</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'index_icon3.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Custom Security</h3>
+						<p>Contact us for a solution to your specific needs.</p>	
+					</div>
+				</div>
+			</div>
+
+	</section><!--  End Features  -->
+
+	<section class="info">
+
+		<div class="info_pic">
+		<!-- picture taken by krosseel from morguefile.com -->
+		</div>
+		<div class="info_details">
+			<h3>Every seventeen seconds, a home burglary occurs.</h3>
+			<p>Why leave your nest unprotected?  You can be safe at all times with us, for less than the price of a latte each day.</p>
+			<%= link_to "Read more!", home_path %>
+		</div>
+
+	</section><!--  End Info  -->
+	
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>

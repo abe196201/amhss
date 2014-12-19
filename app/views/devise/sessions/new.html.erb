@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>American Home Security Systems | Home Security</title>
+  <meta charset="utf-8">
+  <meta name="author" content="pixelhint.com">
+  <meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+  <%= render 'layouts/header' %>
+
+  <section class="billboard">
+    <div class="wrapper">
+      <div class="caption" %>
+      <p>Log in</p>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+
+          <div class="actions">
+            <%= f.submit "Log in" %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+     </section>
+
+    <%if current_customer %>
+    <% else %>
+    <section class="cta">
+      <h3>Not a member yet?</h3>
+      <%= link_to "Sign up for a free quote!", new_customer_registration_path, :class => "cta_btn" %>
+      <span class="cta_sep"></span>
+    </section><!--  End cta  -->
+    <% end %>
+
+<%= render "devise/shared/links" %>
+<%= render 'layouts/footer' %>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>American Home Security Systems | Features</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+	<section class="billboard">
+		<div class="wrapper">
+			<div class="caption">
+				<p style="text-align:center">We can fulfill any home or business security needs.</p>
+			</div>
+		</div>
+	</section><!--  End Billboard  -->
+
+	<section class="features">
+
+		<div class="wrapper" style="background-color:#353434">
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'features_icon1.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>Remote Control</h3>
+						<p>Set your very own security settings wnywhere, anytime.</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="ficon">
+						<%= image_tag 'features_icon2.png' %>
+					</div>
+					<div class="details_exp">
+						<h3>GPS Monitoring</h3>
+						<p>Be sure that we know exactly where and when an intrusion or fire is occuring.</p>
+					</div>
+				</div>
+			</div>
+
+	</section><!--  End Features  -->
+
+
+	<section class="cta">
+		<h3>Learn more about protecting your home or business!</h3>
+		<%= link_to "Home", home_path, :class => "cta_btn" %><br>
+		<%= link_to "Business", business_path, :class => "cta_btn" %>
+		<!--<a href="#" class="cta_btn">Sign up for a free quote!</a>-->
+		<span class="cta_sep"></span>
+	</section><!--  End cta  -->
+
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>American Home Security Systems | Business Security</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<%= render 'layouts/header' %>
+
+	<section class="billboard">
+		<div class="wrapper">
+			<div class="caption">
+				<p style="text-align:center">Your small or medium-sized business is safe with us.</p>
+			</div>
+		</div>
+	</section><!--  End Billboard  -->
+
+	<section class="testimonials wrapper">
+
+		<span class="sep_line sep_top">
+		</span>
+
+		<div class="testi_slider" id="tslider">
+			<div class="t">
+				<p>You need to be where your clients are.  But why leave yourself vulnerable?  Keep your business protected in any area.
+			</div>
+			<div class="t">
+				<p>We'll work with you and your budget to maximize the monitored area, and minimize your costs, in both money and risk.</p>			
+			</div>
+		</div>
+		<div id="t_navigation"></div>
+		<span class="sep_line sep_bottom"></span>
+
+	</section><!--  End Testimonials  -->
+	
+	<%if current_customer %>
+	<% else %>
+	<section class="cta">
+		<h3>Protect your business now!</h3>
+		<%= link_to "Sign up for a free quote!", new_customer_registration_path, :class => "cta_btn" %>
+		<!--<a href="#" class="cta_btn">Sign up for a free quote!</a>-->
+		<span class="cta_sep"></span>
+	</section><!--  End cta  -->
+	<% end %>
+
+	<%= render 'layouts/footer' %>
+
+</body>
+</html>
