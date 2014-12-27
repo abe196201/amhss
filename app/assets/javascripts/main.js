@@ -1,7 +1,6 @@
-$(document).ready(function(){
-
+$(document).on 'click', function(){
     /*  Testimonials Slider  */
-	$('#tslider').carouFredSel({
+    $('#tslider').carouFredSel({
             circular : true,
             infinite: false,
             responsive : true,
@@ -10,11 +9,11 @@ $(document).ready(function(){
                 fx : "fade"
             },
             pagination: {
-				container:	"#t_navigation",
-				anchorBuilder:	function(nr){
-					return '<a href="#'+nr+'"></a>';
-				}
-			}
+                container:  "#t_navigation",
+                anchorBuilder:  function(nr){
+                    return '<a href="#'+nr+'"></a>';
+                }
+            }
     });
 
 
@@ -23,8 +22,4 @@ $(document).ready(function(){
         $("#nav_menu").toggleClass("show_menu");
         return false;
     });
-
 });
-
-
-

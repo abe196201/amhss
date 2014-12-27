@@ -11,7 +11,7 @@
  *	http://en.wikipedia.org/wiki/GNU_General_Public_License
  */
 
-
+$(document).ready(function(){/* your code here*/
 (function($) {
 
 
@@ -4253,3 +4253,4 @@
 
 })(jQuery);
 
+});

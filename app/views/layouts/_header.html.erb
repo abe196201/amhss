@@ -2,21 +2,21 @@
 	<div class="wrapper" style="background-color:#353434">
 		<%=link_to image_tag("logo_new.png", :class => "logo"), root_path %>
 		<a href="#" class="menu_icon" id="menu_icon"></a>
-		<nav id="nav">
+		<nav id="nav_menu">
 			<ul>
-				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "About", about_path, "data-no-turbolink" => true %></li>
 				<li><%= link_to "Features", features_path %></li>
 				<li><%= link_to "Home", home_path %></li>
-				<li><%= link_to "Business", business_path %></li>
+				<li><%= link_to "Business", business_path, "data-no-turbolink" => true %></li>
 				<li><%= link_to "Offers", offers_path %></li>
 				<li><%= link_to "Pricing", pricing_path %></li>
-				<li><%= link_to "Testimonials", testimonials_path %></li>
+				<li><%= link_to "Testimonials", testimonials_path, "data-no-turbolink" => true %></li>
 				<li><%= link_to "Support", support_path %></li>
 				<% if current_customer %>
 				<li><%= link_to "My Account", account_path %></li>
-				<li><%= link_to "Sign Out", destroy_customer_session_path, :method => :delete %></li>
+				<li><%= link_to "Logout", destroy_customer_session_path, :method => :delete %></li>
 				<% else %>
-				<li><%= link_to "Sign In", new_customer_session_path %></li>
+				<li><%= link_to "Login", "customer_login" %></li>
 				<% end %>
 			</ul>
 		</nav>
