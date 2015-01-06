@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :admins
   devise_scope :admin do
     get "admin_login", to: "devise/sessions#new"
   end
